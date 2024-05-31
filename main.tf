@@ -85,6 +85,7 @@ resource "google_cloudfunctions2_function" "function" {
       available_memory      = service_config.value.available_memory
       available_cpu         = service_config.value.available_cpu
       timeout_seconds       = service_config.value.timeout_seconds
+      max_instance_request_concurrency = service_config.value.max_instance_request_concurrency
       environment_variables = service_config.value.runtime_env_variables != null ? service_config.value.runtime_env_variables : {}
 
       vpc_connector                 = service_config.value.vpc_connector

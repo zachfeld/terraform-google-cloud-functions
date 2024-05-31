@@ -118,6 +118,7 @@ variable "service_config" {
     available_memory      = optional(string, "256M")
     available_cpu         = optional(string, 1)
     timeout_seconds       = optional(string, 60)
+    max_instance_request_concurrency = optional(string, 1)
     runtime_env_variables = optional(map(string), null)
     runtime_secret_env_variables = optional(set(object({
       key_name   = string
